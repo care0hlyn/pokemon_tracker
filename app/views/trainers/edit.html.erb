@@ -1,0 +1,7 @@
+<% content_for(:title, "Trainers") %>
+
+<form action="/trainers/<%= @trainer.id %>/edit" method="post">
+	<input name="_method" type="hidden" value="patch">
+  <%= render('form')%>
+  <button>Update Trainer</button>
+</form>

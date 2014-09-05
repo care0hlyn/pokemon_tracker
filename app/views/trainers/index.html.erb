@@ -1,0 +1,11 @@
+<% content_for(:title, "Trainers") %>
+
+<div clas="page-header">
+	<h1>Trainers:</h1>
+</div>
+
+<ul>
+	<% @trainers.each do |trainer| %>
+	<li><a href="trainers/<%= trainer.id %>/show"><%= trainer.name %></a></li>
+	<% end %>
+</ul>

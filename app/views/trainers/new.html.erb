@@ -1,0 +1,19 @@
+<% content_for(:title, "Pokemon Tracker") %>
+
+<% if @trainer.errors.any? %>
+  <h3>Please fix the following errors: </h3>
+  <ul>
+    <% @trainer.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div clas="page-header">
+	<h4>Add Trainer to list:</h4>
+</div>
+
+<form action="/trainers" method="post">
+  <%= render('form')%>
+  <button>Add Trainer</button>
+</form>
