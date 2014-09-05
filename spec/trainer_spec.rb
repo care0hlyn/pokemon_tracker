@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Animal do
+describe Trainer do
 	it { should validate_presence_of :name }
-	it { should have_many :masters }
+	it { should have_many :animals }
 end
