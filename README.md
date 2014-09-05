@@ -23,5 +23,9 @@ This website allows a user to attach a captured pokemon to a trainer and determi
 6. Run rails server
 7. Navigate to http://localhost:3000 in your browser.
 
+#####Schema:
+
+![Alt text](https://raw.githubusercontent.com/care0hlyn/pokemon_tracker/master/pokemon_tracker.png)
+
 ####License:
 MIT
