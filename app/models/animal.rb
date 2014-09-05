@@ -1,6 +1,6 @@
 class Animal < ActiveRecord::Base
 	validates :name, :presence => true
 
-	has_one :master
-	has_one :trainer, through: :master
+	has_many :masters
+	has_many :trainers, through: :masters
 end

@@ -2,6 +2,6 @@ require 'rails_helper'
 
 describe Animal do
 	it { should validate_presence_of :name }
-	it { should have_one :master }
+	it { should have_many :masters }
 
 end

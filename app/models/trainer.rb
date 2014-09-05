@@ -3,5 +3,4 @@ class Trainer < ActiveRecord::Base
 
 	has_many :masters
 	has_many :animals, through: :masters
-
 end
