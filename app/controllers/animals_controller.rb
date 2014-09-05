@@ -41,4 +41,11 @@ class AnimalsController < ApplicationController
 		end
 	end
 
+	def delete
+		@animal = Animal.find(params[:id])
+		@animal.destroy
+		flash[:notice] = "Pokemon deleted."
+		redirect_to('/animals')
+	end
+
 end

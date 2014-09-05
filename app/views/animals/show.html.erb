@@ -16,6 +16,12 @@
 	<% end %>
 </ul>
 
+<a href="/animals/<%= @animal.id %>/edit">Edit Pokemon</a> | 
+<a href="/animals/<%= @animal.id %>"
+	 data-confirm="You sure?"
+   data-method="delete"
+   rel="nofollow">Delete Pokemon</a>
+
 <div clas="page-header">
 	<h4>Trainer:</h4>
 </div>
@@ -26,4 +32,3 @@
 
 <br>
 
-<a href="/animals/<%= @animal.id %>/edit">Edit Pokemon</a>
