@@ -1,50 +1,51 @@
 class MastersController < ApplicationController
 	def index
-		@trainers = Trainer.all
-		render('trainers/index.html.erb')
+		@masters = Master.all
+		render('masters/index.html.erb')
 	end
 
 	def show
-		@trainers = Trainer.all
-		@trainer = Trainer.find(params[:id])
-		render('trainers/show.html.erb')
+		@masters = Master.all
+		@master = Master.find(params[:id])
+		render('masters/show.html.erb')
 	end
 
 	def new
-		@trainer = Trainer.new
-		render('trainers/new.html.erb')
+		@master = Master.new
+		render('masters/new.html.erb')
 	end
 
 	def create
-		@trainer = Trainer.new(params[:trainer])
-		if @trainer.save
-			flash[:notice] = "Trainer added."
-			redirect_to('/trainers')
+		@master = Master.new(params[:master])
+
+		if @master.save
+			flash[:notice] = "Master added."
+			redirect_to('/masters')
 		else
-			render('/trainers/new.html.erb')
+			render('/masters/new.html.erb')
 		end
 	end
 
 	def edit
-		@trainer = Trainer.find(params[:id])
-		flash[:notice] = "Trainer has been updated."
-		render('trainers/edit.html.erb')
+		@master = Master.find(params[:id])
+		flash[:notice] = "Master has been updated."
+		render('masters/edit.html.erb')
 	end
 
 	def update
-		@trainer = Trainer.find(params[:id])
-		if @trainer.update(params[:trainer])
-			flash[:notice] = "Trainer updated."
-			redirect_to('/trainers')
+		@master = Master.find(params[:id])
+		if @master.update(params[:master])
+			flash[:notice] = "Master updated."
+			redirect_to('/masters')
 		else
-			render('trainers/edit.html.erb')
+			render('masters/edit.html.erb')
 		end
 	end
 
 	def delete
-		@trainer = Trainer.find(params[:id])
-		@trainer.destroy
-		flash[:notice] = "Trainer deleted."
-		redirect_to('/trainers')
+		@master = Master.find(params[:id])
+		@master.destroy
+		flash[:notice] = "Master deleted."
+		redirect_to('/masters')
 	end
 end

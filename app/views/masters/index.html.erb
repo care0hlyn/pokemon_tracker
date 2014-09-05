@@ -1,0 +1,11 @@
+<% content_for(:title, "Masters") %>
+
+<div clas="page-header">
+	<h1>Masters:</h1>
+</div>
+
+<ul>
+	<% @masters.each do |master| %>
+	<li><%= master.trainer.name + " | " +  master.animal.name %></a></li>
+	<% end %>
+</ul>
