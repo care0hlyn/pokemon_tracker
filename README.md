@@ -1,7 +1,5 @@
 #Pokemon Tracker - Rails#
 
-#####[Pokemon Tracker] (http://bus-timetable-epicodus.herokuapp.com/) on Heroku
-
 #####Written by [Carolyn Huynh] (https://github/care0hlyn)
 
 ###Description:
