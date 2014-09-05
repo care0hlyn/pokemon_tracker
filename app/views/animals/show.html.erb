@@ -11,9 +11,7 @@
 </div>
 
 <ul>
-	<% @animals.each do |animal| %>
-	<li><%= animal.name %></li>
-	<% end %>
+	<li><%= @animal.name %></li>
 </ul>
 
 <a href="/animals/<%= @animal.id %>/edit">Edit Pokemon</a> | 
