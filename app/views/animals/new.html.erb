@@ -1,0 +1,19 @@
+<% content_for(:title, "Pokemon Tracker") %>
+
+<% if @animal.errors.any? %>
+  <h3>Please fix the following errors: </h3>
+  <ul>
+    <% @animal.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div clas="page-header">
+	<h4>Add Pokemon to captured list:</h4>
+</div>
+
+<form action="/animals" method="post">
+  <%= render('form')%>
+  <button>Pokemon Captured!</button>
+</form>

@@ -1,7 +1,11 @@
-<h1>Pokemon:</h1>
+<% content_for(:title, "Pokemon Tracker") %>
+
+<div clas="page-header">
+	<h1>Pokemon:</h1>
+</div>
 
 <ul>
 	<% @animals.each do |animal| %>
-	<li><%= animal.name %></li>
+	<li><a href="animals/<%= animal.id %>/show"><%= animal.name %></a></li>
 	<% end %>
 </ul>

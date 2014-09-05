@@ -1,0 +1,7 @@
+<% content_for(:title, "Pokemon Tracker") %>
+
+<form action="/animals/<%= @animal.id %>/edit" method="post">
+	<input name="_method" type="hidden" value="patch">
+  <%= render('form')%>
+  <button>Update Pokemon</button>
+</form>
